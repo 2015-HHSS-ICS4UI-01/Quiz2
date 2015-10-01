@@ -41,11 +41,11 @@ public class Quiz2 {
      */
     public String reverseString(String word){
         
-        int n = word.length() -1;                   //n equals the last letter
+        int n = word.length() -1;                  //n equals the last letter
         
         
      char first = word.charAt(0);                  //first equals the first letter of the word 
-     char last = word.charAt(word.length()-1);     //last equals the last letter of the word
+     char last = word.charAt(n);                   //last equals the last letter of the word
         if(n <=1){                                 //if the word length is 1 letter or no letters 
             return word;                           //return the word as it is
         
