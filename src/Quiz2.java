@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Nima Fathi
  */
 public class Quiz2 {
 
@@ -20,15 +20,24 @@ public class Quiz2 {
      */
     public int sumUpTo(int n){
         
+     if(n==1){
+         return 0;
+     }
+     
+         
+         return n + sumUpTo(n - 1);
+     
+     
     }
     
-    /**
-     * Takes in a String and returns the same String in reverse
-     * 
-     * @param word the word to be reversed
-     * @return the input word reversed
-     */
+    
     public String reverseString(String word){
+        
+        word.charAt(word.length());
+        
+        word = word.replace(word, word);
+        
+        return word;
         
     }
     
@@ -42,6 +51,17 @@ public class Quiz2 {
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
-    }
+        //sumUpTo
+        int n = 5;
+        n = test.sumUpTo(n);
+        System.out.println(n);
+        
+        //word
+        String j = test.reverseString("hello");
+        System.out.println(j);
+        
+        
+        
+    } 
     
 }
