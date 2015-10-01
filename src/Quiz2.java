@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author DMITRY_KOBETS
  */
 public class Quiz2 {
 
@@ -19,7 +19,11 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if (n == 0)
+        {
+            return 0;
+        }
+        return n + sumUpTo(n-1);
     }
     
     /**
@@ -30,6 +34,23 @@ public class Quiz2 {
      */
     public String reverseString(String word){
         
+        if (word.length() == 0)
+        {
+            return "";
+        }
+        int wordLength = word.length();
+        char lastChar = word.charAt(wordLength-1);
+        String newWord = word.substring(0, wordLength-1); // returns the string without the last character
+        
+        return lastChar + reverseString(newWord);
+        /*
+         
+         cat
+         * t + (ca)
+         *      a + (c)
+         *          c + ()
+         
+         */
     }
     
     
@@ -39,8 +60,8 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
-        
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
+        int thing = test.sumUpTo(0);
+        System.out.println(thing);
         
     }
     
