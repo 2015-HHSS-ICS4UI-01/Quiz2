@@ -5,8 +5,8 @@
  */
 
 /**
- *
- * @author PUT_YOUR_NAME_HERE
+ * 
+ * @author naylj6470
  */
 public class Quiz2 {
 
@@ -19,7 +19,18 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        int j = 0;     
+        if(n==0)
+        {
+            return 0;
+        }else
+        {
+            for(int i = 0; i < n+1; i++)
+            {
+                j = i+j;
+            } 
+        }
+        return j;
     }
     
     /**
@@ -29,10 +40,25 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        String word2 = "";
+        if(word.length() <= 1)
+        {
+            return word;
+        }else
+        {            
+            for(int i = 0; i < word.length(); i++)
+            {
+                char s = word.charAt(0);
+                char j = word.charAt(word.length()-1);
+                word2 = word.replace(j, s);
+                System.out.println(word);
+                word2 = word.replace(s, j);
+                System.out.println(word2);
+               
+            }                
+        }   
+        return word;
     }
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -41,7 +67,8 @@ public class Quiz2 {
         Quiz2 test = new Quiz2();
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
-        
+//        System.out.println(test.sumUpTo(5));
+        System.out.println(test.reverseString("cat"));
     }
     
 }
