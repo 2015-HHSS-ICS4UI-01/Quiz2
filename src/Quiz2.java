@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,7 +9,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * George
  */
 public class Quiz2 {
 
@@ -19,7 +22,12 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        // if they enter 1 or 0 the number will remain 1 or 0
+        if(n == 0 || n == 1){
+            return n;
+            
+        }else
+            return n + sumUpTo(n-1);
     }
     
     /**
@@ -29,7 +37,14 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        // returns the letter if there is only one
+        if (word.length() <= 1){
+            return word;
+        }else{
+            // it returns the last letter, but i want it to keep going.
+            return reverseString(word.substring(word.length()-1));
+            
+        }
     }
     
     
@@ -41,7 +56,17 @@ public class Quiz2 {
         Quiz2 test = new Quiz2();
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
+        Scanner input = new Scanner(System.in) ;
         
+        System.out.println("please enter a number");
+        int n = input.nextInt();
+        System.out.println(test.sumUpTo(n));
+        
+        input.nextLine();
+        
+        System.out.println("please enter a word");
+        String word = input.nextLine();
+        System.out.println(test.reverseString(word));
     }
     
 }
