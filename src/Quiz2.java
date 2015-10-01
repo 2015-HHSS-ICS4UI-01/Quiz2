@@ -63,9 +63,10 @@ public class Quiz2 {
         int n = input.nextInt();
 
         Quiz2 test = new Quiz2();
+        
         System.out.println(test.sumUpTo(n));
         
-        
+        input.nextLine();
         System.out.print("Enter a word to reverse: ");
         
         String word = input.nextLine();
