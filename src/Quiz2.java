@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Stuart Isley
  */
 public class Quiz2 {
 
@@ -59,9 +59,9 @@ public class Quiz2 {
         Scanner input = new Scanner(System.in);
         Quiz2 test = new Quiz2();
         System.out.println(test.sumUpTo(0));
-        
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
         System.out.println(test.reverseString(input.nextLine()));
+        //use test.sumUpTo(__)  or test.reverseString(___) to test
+        
     }
     
 }
