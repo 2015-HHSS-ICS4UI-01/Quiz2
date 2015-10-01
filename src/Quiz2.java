@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author thomt9963
  */
 public class Quiz2 {
 
@@ -19,7 +19,11 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if (n == 0) {
+            return 0;
+        } else {
+            return sumUpTo(n - 1) + n;
+        }
     }
     
     /**
@@ -29,6 +33,16 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        int length = word.length();
+        if(length > 0){
+            char ch = word.charAt(length);
+            // get first char
+            length = length - 1;
+            // prepare to get second char
+            return reverseString(ch);
+            // output characters individually in reverse order
+        }   
+        return null;
         
     }
     
@@ -39,7 +53,8 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
-        
+        System.out.println(test.sumUpTo(10));
+               
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
     }
