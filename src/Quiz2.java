@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Jafer Haider
  */
 public class Quiz2 {
 
@@ -19,7 +19,10 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if (n == 0){ 
+            return n; //return 0 if we've reached the last number (base case)
+        }
+        return sumUpTo(n-1) + n; //call recursivly with number - 1
     }
     
     /**
@@ -29,7 +32,11 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        if (word.length() == 0)
+        {
+            return ""; //if the length of the word is 0, return an empty string
+        }
+        return reverseString(word.substring(1)) + word.charAt(0); //recursively call the method with the first letter added to the end of the string
     }
     
     
@@ -39,7 +46,6 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
-        
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
     }
