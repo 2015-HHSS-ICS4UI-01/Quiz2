@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,7 +9,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Leo Yao
  */
 public class Quiz2 {
 
@@ -19,7 +22,12 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if(n ==0){
+            return 0;
+        }
+        else{
+            return sumUpTo(n-1)+n;
+        }
     }
     
     /**
@@ -29,7 +37,13 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        if(word.length() <= 1){
+            return word;
+        }
+        else{
+                return word.charAt(word.length()-1)+ reverseString(word.substring(0,word.length()-1));
+
+        }
     }
     
     
@@ -38,10 +52,17 @@ public class Quiz2 {
      */
     public static void main(String[] args) {
         // Use this section for conducting tests
+        Scanner input = new Scanner(System.in);
         Quiz2 test = new Quiz2();
         
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
+//        use test.sumUpTo(__)  or test.reverseString(___) to test
+        int n = input.nextInt();
+        input.nextLine();
+        System.out.println(test.sumUpTo(n));
+
+        String word = input.nextLine();
         
+        System.out.println(test.reverseString(word));
     }
     
 }
