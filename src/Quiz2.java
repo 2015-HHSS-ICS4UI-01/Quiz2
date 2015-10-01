@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,7 +9,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author kampn2687
  */
 public class Quiz2 {
 
@@ -19,6 +22,11 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
+        if(n == 1)
+        {
+            return 1;
+        }
+        return (n + sumUpTo(n -1));
         
     }
     
@@ -29,7 +37,20 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        // get the word the user wants spelled backwards
+        // if there is only one letter, then return the letter
+        int [] lett = new int[i];
+        //figure out the length of the word
+        word.length(x);
+        // identify what strings are each
+        lett[1] = word.substring(0);
         
+        k++;
+        if(k = x ){
+          return reverseString(lett[x-k]); 
+        }
+        System.out.println( );
+                
     }
     
     
@@ -39,6 +60,7 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
+        System.out.println(test.sumUpTo(5));
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
