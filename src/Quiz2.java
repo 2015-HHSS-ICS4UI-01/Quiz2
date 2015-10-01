@@ -43,14 +43,6 @@ public class Quiz2 {
         String newWord = word.substring(0, wordLength-1); // returns the string without the last character
         
         return lastChar + reverseString(newWord);
-        /*
-         
-         cat
-         * t + (ca)
-         *      a + (c)
-         *          c + ()
-         
-         */
     }
     
     
