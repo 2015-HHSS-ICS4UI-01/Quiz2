@@ -39,12 +39,17 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        if(word.length() < 1){
+
+        if(word.length() == 0){
             return null;
         }else 
             {
-                String letter = word.charAt(0);
-                return reverseString(word.length()word.charAt(0)-1,letter);
+                char letter = word.charAt(word.length());
+                int len = word.length();
+                word = word.substring(0,len - 1);
+                //take the first letter and save it
+                return reverseString(word.length(),letter);
+                //take the letter at the begining and remove it so that you next run u get get the secound letter in line
             }
         //return isPalindrome(s.substring(1,s.length() -1));
         return null;
