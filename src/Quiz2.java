@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Tristan Donelle
  */
 public class Quiz2 {
 
@@ -19,7 +19,13 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if(n == 0)
+        {   //when the number reaches 0, all numbers have been added
+            return 0;
+        }else
+        {   //returns the number and calls the method with a number 1 value less than the number
+            return n + sumUpTo(n-1); 
+        }
     }
     
     /**
@@ -29,7 +35,16 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        //int length = word.length();
+        if(word.length() == 1)
+        {   //when the word is a single letter, return that letter
+            return word;
+        }else
+        {   
+            String sub = word.substring(0, word.length() - 1); //variable for all letters but the last letter
+            String letter = word.substring(word.length() - 1); //variable for the last letter
+            return letter + reverseString(sub); //returns the last letter and calls with the remaining letters
+        }
     }
     
     
