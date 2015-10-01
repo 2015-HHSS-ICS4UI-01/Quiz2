@@ -69,8 +69,8 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
-        System.out.println(test.sumUpTo(5)); 
-        System.out.println(test.reverseString("doggie"));
+        System.out.println(test.sumUpTo(5));                    //test the first method
+        System.out.println(test.reverseString("doggie"));       //test the second method
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
     }
