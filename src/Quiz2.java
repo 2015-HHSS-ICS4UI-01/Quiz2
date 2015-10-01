@@ -35,13 +35,10 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        String temp=new String();
-        temp=word;
         if(word.length()==0||word.length()==1)
             return ""+word;
         else
-            return ""+word.charAt(word.length()-1)+reverseString(word.substring(0,word.length()-1));
-            
+            return ""+word.charAt(word.length()-1)+reverseString(word.substring(0,word.length()-1));        
     }
     
     
