@@ -22,8 +22,12 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
+        //if the intiger n is equal to zero OR one then:
+        //return the intiger n
         if(n==0||n==1)
             return n;
+        //otherwise return the intiger n plus the outcome of sumUpTO:
+        //when the intiger n minus one is entered
         else
             return n+sumUpTo(n-1);
     }
@@ -35,8 +39,12 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        //if the length of the string word is equal to zero or one then:
+        //return a string plus the string word
         if(word.length()==0||word.length()==1)
             return ""+word;
+        //otherwise return a string plus the last letter of the string word and the outcome of reverseString:
+        //when the string word is entered, starting at the begining of the string word with it being one less in length 
         else
             return ""+word.charAt(word.length()-1)+reverseString(word.substring(0,word.length()-1));        
     }
