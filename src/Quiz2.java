@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Morgenne Besenschek
  */
 public class Quiz2 {
 
@@ -20,6 +20,17 @@ public class Quiz2 {
      */
     public int sumUpTo(int n){
         
+        //if number entered is less than or equal to 1
+        if(n <= 1){  
+            //return entered number to the user
+            return n;
+        }
+        //if number entered is greater than 1
+        else{
+            //return the sum of the entered number plus the number minus one
+            return n + sumUpTo(n - 1);
+        }
+        
     }
     
     /**
@@ -29,7 +40,17 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        //if the length of the word is one character or less
+        if(word.length() <= 1)
+        {
+            //return the entered word to the user
+            return word;
+        }
+        //if the length of the word is more than one character
+        else{
+            //return the entered word minus its last letter, and the last letter of the word
+            return word.charAt(word.length() - 1) + reverseString(word.substring(0, word.length() - 1));
+        }
     }
     
     
@@ -39,8 +60,9 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
-        
         //use test.sumUpTo(__)  or test.reverseString(___) to test
+        System.out.println(test.sumUpTo(10));
+        System.out.println(test.reverseString("mississippi"));
         
     }
     
