@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Nathan von Hatten
  */
 public class Quiz2 {
 
@@ -19,7 +19,14 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        if(n==0){               //if the number is zero return 0 (base case)
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }else{
+            return n + sumUpTo(n-1); //return the number plus the number minus one
+        }
     }
     
     /**
@@ -29,7 +36,24 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        if(word.length()==0){                       //if the word is 1 character, return the word(base case)
+            return word;
+        }
+        if(word.length()==1){
+            return word;
+        }else {
+           int length = word.length()-1;
+          char n = word.charAt(0);
+          char x = word.charAt(word.length()-1);
+            
+          word = word.substring(1, length);         //remove the first and last letter
+          
+          
+          return x +reverseString(word)+ n;         //flip first and last letter and then do the middle letters  
+        }
+            
+            
+    
     }
     
     
