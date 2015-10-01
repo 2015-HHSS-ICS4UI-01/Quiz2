@@ -47,9 +47,9 @@ public class Quiz2 {
                 char letter = word.charAt(word.length());
                 int len = word.length();
                 word = word.substring(0,len - 1);
-                //take the first letter and save it
+                //take the last letter and save it
                 return reverseString(word.length,letter);
-                //take the letter at the begining and remove it so that you next run u get get the secound letter in line
+                //takes the last letter and removes it then calls letter and prints 
             }
         //return isPalindrome(s.substring(1,s.length() -1));
      }
