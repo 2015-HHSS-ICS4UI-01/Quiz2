@@ -44,13 +44,13 @@ public class Quiz2 {
         if (word.length() == 1 || word.length() == 0) {
             return word;
         } else {
-            
+
             char replace = word.charAt(word.length() - 1);
-        //adds the last char to front
-        return replace + reverseString(word.substring(0, word.length()-1));
+            //adds the last char to front
+            return replace + reverseString(word.substring(0, word.length() - 1));
         }
-        
-        
+
+
     }
 
     /**
@@ -63,12 +63,12 @@ public class Quiz2 {
         int n = input.nextInt();
 
         Quiz2 test = new Quiz2();
-        
+
         System.out.println(test.sumUpTo(n));
-        
+
         input.nextLine();
         System.out.print("Enter a word to reverse: ");
-        
+
         String word = input.nextLine();
         System.out.println(test.reverseString(word));
         //use test.sumUpTo(__)  or test.reverseString(___) to test
